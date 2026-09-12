@@ -1,29 +1,29 @@
-**Authentication
+** Authentication **
 
     SecReq-001:The system shall require users to authenticate before accessing protected resources.
     SecReq-002:The system shall reject invalid or expired authentication tokens.
     SecReq-003:The system shall require devices to authenticate before submitting telemetry.
     
-**Authorization
+** Authorization **
 
     SecReq-004:The system shall enforce role-based access control for protected operations.
     SecReq-005:Users shall only be permitted to perform actions authorized for their assigned role.
     SecReq-006:Unauthorized access attempts shall be denied and recorded.
 
-**Device Security
+** Device Security
 
     SecReq-007:Each registered device shall have a unique device identity.
     SecReq-008:The system shall reject telemetry from unknown or unauthorized devices.
     SecReq-009:Device credentials shall not be stored in plaintext within source code.
 
 
-**Communication Security
+** Communication Security
 
     SecReq-010:Sensitive application and telemetry communications shall use encrypted transport.
     SecReq-011:The system shall not transmit authentication credentials over unencrypted connections.
 
 
-**Input Validation
+** Input Validation
 
     SecReq-012:All externally supplied data shall be validated before processing.
     SecReq-013:Telemetry values shall be checked for expected type, format, length, and acceptable range.
