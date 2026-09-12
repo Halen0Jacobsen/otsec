@@ -1,0 +1,24 @@
+-  **Working Java Spring Boot application**
+- **Python device simulators**
+- **Requirements specification**
+- **Security requirements specification**
+- **Requirements traceability matrix**
+- **System architecture documentation**
+- **Security architecture documentation**
+- **Data-flow diagrams**
+- **Trust-boundary documentation**
+- **STRIDE threat model**
+- **Threat register**
+- **API documentation**
+- **MQTT documentation**
+- **Automated unit and integration tests**
+- **Negative security tests**
+- **CI/CD pipeline**
+- **Static-analysis results**
+- **Dependency-security results**
+- **Container-security results**
+- **CycloneDX SBOM**
+- **Security findings**
+- **Remediation evidence**
+- **Residual-risk documentation**
+- **Final release documentation**
