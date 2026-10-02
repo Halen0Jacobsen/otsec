@@ -1,0 +1,1 @@
+{"site":[{"@name":"http://192.168.10.20","alerts":[{"pluginid":"10020","alert":"Demo: framing policy review","riskcode":"2","desc":"Synthetic demonstration finding for the dashboard.","solution":"Review the application's Content-Security-Policy frame-ancestors directive."}]}]}

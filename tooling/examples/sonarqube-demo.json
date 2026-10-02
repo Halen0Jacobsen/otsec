@@ -1,0 +1,1 @@
+{"issues":[{"message":"Synthetic finding: review controller validation","severity":"MAJOR","component":"demo-control-api:Controller.java","rule":"java:demo"}]}

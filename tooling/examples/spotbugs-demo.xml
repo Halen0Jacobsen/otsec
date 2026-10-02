@@ -1,0 +1,1 @@
+<BugCollection><BugInstance type="DEMO_SQL_REVIEW" priority="1"><Class classname="demo.ControlRepository"/><LongMessage>Synthetic finding: review parameter binding.</LongMessage></BugInstance></BugCollection>

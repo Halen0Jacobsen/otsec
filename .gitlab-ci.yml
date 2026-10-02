@@ -8,6 +8,13 @@
 stages:
 - test
 - secret-detection
+tooling-tests:
+  stage: test
+  image: python:3.14-slim
+  variables:
+    PYTHONPATH: "$CI_PROJECT_DIR/tooling"
+  script:
+  - python -m unittest discover -s tooling/tests -v
 sast:
   stage: test
 include:
