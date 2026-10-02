@@ -1,3 +1,7 @@
+# Java enterprise API
+
+The legacy routes below are also implemented by the Java server. Java adds `GET /api/csrf`; obtain its `headerName`/`token` with the session cookie and attach that header to POST requests. Enterprise reads require VIEWER, OPERATOR or ADMIN; imports/plans require OPERATOR or ADMIN; environment creation requires ADMIN. Browser login uses `/oauth2/authorization/keycloak`. See [enterprise setup](Enterprise.md). The legacy access model described below applies only to Python.
+
 # Local HTTP API
 
 Base URL: `http://127.0.0.1:8080`, or the selected port. This API belongs to the local

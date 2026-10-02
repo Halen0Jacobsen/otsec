@@ -4,6 +4,7 @@ Start with the repository [README](../README.md) to run the application.
 
 | Document | Purpose |
 | --- | --- |
+| [Java enterprise edition](Enterprise.md) | Java build, PostgreSQL, Keycloak roles, TLS, API, migration and release limitations |
 | [Operations](Operations.md) | Installation, configuration, CLI commands, imports, persistence, backup and troubleshooting |
 | [HTTP API](API.md) | Local routes, request/response contracts, validation and access boundaries |
 | [Integration contracts](IntegrationContracts.md) | Supported report formats, severity mapping, deduplication and adapter limits |
@@ -16,6 +17,6 @@ Start with the repository [README](../README.md) to run the application.
 | [Deliverables](ProjectDeliverables.md) | Overall planned deliverables |
 
 Functional and security release targets remain in [Requirements](../Requirements).
-The runnable Python companion is an initial implementation; it does not satisfy
-all planned platform requirements. See [tooling source guide](../tooling/README.md)
+The Java server ports the current workflows and adds enterprise identity/configuration. It does not satisfy
+all planned platform requirements. Python remains the legacy companion. See [tooling source guide](../tooling/README.md)
 for module responsibilities and [contribution guidance](../CONTRIBUTING.md) for changes.

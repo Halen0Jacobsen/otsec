@@ -1,3 +1,7 @@
+# Java port status
+
+The primary backend now uses Spring Boot, JDBC/Flyway and Spring Security OIDC/roles. Its workflows preserve the WCT dashboard and offline integrations. See [enterprise architecture and remaining release work](Enterprise.md). The companion architecture and initial delivery record below describe the earlier Python implementation.
+
 # OT tooling foundation
 
 ## Architecture decision

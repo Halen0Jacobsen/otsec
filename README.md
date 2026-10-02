@@ -1,10 +1,21 @@
 # OTSec
 
-Local OT and application security workspace with separate lab and production policies. The Python companion supplements the planned Java/Spring Boot, PostgreSQL, Keycloak and Mosquitto platform.
+WCT OT and application security workspace with separate lab and production policies. The primary server is Java 21 / Spring Boot 4.0.8, with PostgreSQL, Keycloak OIDC login, role authorization and Flyway migrations for enterprise deployments. The WCT interface uses HTML, CSS and JavaScript. Python remains available as the legacy companion CLI.
 
 ## Run
 
-Python 3.11+, no third-party Python packages required. From the repository root in PowerShell:
+JDK 21 and Maven 3.9+. From the repository root:
+
+```powershell
+mvn verify
+java -jar target/otsec-0.2.0.jar --spring.profiles.active=local
+```
+
+Open http://127.0.0.1:8080. Explicit local mode uses a separate H2 database and session CSRF protection. The default enterprise profile requires PostgreSQL and Keycloak configuration; see [enterprise setup, roles, deployment and data migration](Documents/Enterprise.md). Existing SQLite data is preserved and is not automatically loaded into Java. Active scans and remediation remain proposals.
+
+### Legacy Python companion
+
+Python 3.11+, no third-party packages required:
 
 ```powershell
 $env:PYTHONPATH = "$PWD/tooling"
@@ -57,17 +68,18 @@ Imports are limited to 5 MiB and 10,000 records/findings. Zeek requires `ts`, `i
 
 Original reports are not retained. Only selected normalized evidence is stored. ZAP site credentials, query parameters and fragments are removed; request/response bodies and alert instances are not imported. Descriptions and other free text are not guaranteed to be secret-free: review files before importing. XML entities/DOCTYPE are rejected. All displayed evidence uses DOM textContent.
 
-The dashboard binds to 127.0.0.1 and checks Host. Writes require same-origin requests, JSON content type and a custom header; foreign origins are rejected. Browser forms and the CLI act as the local operator. This is not authentication: local processes can access the database/API, and the owner can edit audit history. Do not expose it through a proxy. No authenticated user/device identity, RBAC, TLS, scheduler, live collector, scanner execution, protected audit retention or production deployment is provided yet.
+The legacy Python dashboard binds to loopback and uses Host/origin/custom-header checks; it has no authentication. Java local mode is also loopback-only and adds session CSRF. Java enterprise mode uses OIDC sessions, VIEWER/OPERATOR/ADMIN roles, authenticated audit actors, secure cookies and HTTPS redirects. Configure actual TLS and identity infrastructure before deployment. See [enterprise trust boundaries and remaining release work](Documents/Enterprise.md). Scheduler, live collectors, scanner/device execution and protected external audit retention remain pending.
 
 ## Verification
 
 ```powershell
+mvn verify
 $env:PYTHONPATH = "$PWD/tooling"
 python -m unittest discover -s tooling/tests -v
 node --check tooling/otsec/web/app.js
 ```
 
-Tests cover atomic imports, formats, malformed input, deduplication, scope isolation, policies, persisted state, audit, HTTP writes/origin boundaries and font serving. GitLab CI runs Python tests alongside the existing security templates; hosted CI is unverified until publication.
+Java tests cover ported workflows, atomic imports, report formats, deduplication, production policy, CSRF, role authorization and audit subjects. Python tests preserve legacy behavior. GitLab CI runs both suites and packages the Java JAR alongside existing security templates. Real PostgreSQL/Keycloak/TLS and hosted CI remain unverified locally.
 
 Fonts are bundled locally with open font licenses in `tooling/otsec/web/fonts`. No external font requests are made by the app. The interface follows the user-supplied current WCT brand system: warm paper #f4f1ea, deep olive #26351f, restrained gold #9d7744, muted grey/olive #68685f, white WCT logo on olive, subtle rules, limited corner radii and minimal shadows. Typography uses locally bundled Inter, with Plex Mono for technical identifiers. See [current brand system](Documents/BrandSystem.md).
 

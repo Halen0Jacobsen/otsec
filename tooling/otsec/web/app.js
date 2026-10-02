@@ -98,12 +98,12 @@ function render() {
   renderFindings(); renderTools();
 }
 async function refresh() {
-  try { const response = await fetch('/api/status'); if (!response.ok) throw new Error(); data = await response.json(); render(); $('status').textContent = `Updated ${new Date().toLocaleTimeString()} · local operator`; }
+  try { const response = await fetch('/api/status'); if (response.status === 401) { window.location.assign('/oauth2/authorization/keycloak'); return; } if (!response.ok) throw new Error(); data = await response.json(); render(); $('status').textContent = `Updated ${new Date().toLocaleTimeString()}`; }
   catch { $('status').textContent = 'Unable to load workspace. Check that the local server is running.'; }
 }
 async function submit(form, path, body) {
   const submitButton = form.querySelector('[type=submit]'); submitButton.disabled = true; form.querySelector('.form-error').textContent = '';
-  try { const response = await fetch(path,{method:'POST',headers:{'Content-Type':'application/json','X-OTSec-Request':'local-ui'},body:JSON.stringify(body)}); const output = await response.json(); if (!response.ok) throw new Error(output.error || 'Request failed.'); form.closest('dialog').close(); form.reset(); $('message').hidden = false; const result = output.result; $('message').textContent = result.imported !== undefined ? `Evidence imported: ${result.imported} new records; ${result.duplicates} duplicates skipped.` : result.state ? `Proposal recorded: ${result.state.replaceAll('-',' ')}. No action executed.` : `Environment ${result.name} added.`; await refresh(); }
+  try { const headers = {'Content-Type':'application/json','X-OTSec-Request':'local-ui'}; const tokenResponse = await fetch('/api/csrf'); if (tokenResponse.ok) { const csrf = await tokenResponse.json(); headers[csrf.headerName] = csrf.token; } else if (tokenResponse.status !== 404) throw new Error('Session expired. Reload and sign in.'); const response = await fetch(path,{method:'POST',headers,body:JSON.stringify(body)}); const output = await response.json(); if (!response.ok) throw new Error(output.error || 'Request failed.'); form.closest('dialog').close(); form.reset(); $('message').hidden = false; const result = output.result; $('message').textContent = result.imported !== undefined ? `Evidence imported: ${result.imported} new records; ${result.duplicates} duplicates skipped.` : result.state ? `Proposal recorded: ${result.state.replaceAll('-',' ')}. No action executed.` : `Environment ${result.name} added.`; await refresh(); }
   catch(error) { form.querySelector('.form-error').textContent = error.message; }
   finally { submitButton.disabled = false; }
 }

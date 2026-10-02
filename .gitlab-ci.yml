@@ -8,6 +8,17 @@
 stages:
 - test
 - secret-detection
+java-tests:
+  stage: test
+  image: maven:3.9-eclipse-temurin-21
+  script:
+  - mvn --batch-mode verify
+  artifacts:
+    when: always
+    reports:
+      junit: target/surefire-reports/TEST-*.xml
+    paths:
+    - target/otsec-0.2.0.jar
 tooling-tests:
   stage: test
   image: python:3.14-slim

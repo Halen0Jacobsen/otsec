@@ -8,7 +8,7 @@ boundaries. Report normalization must remain offline and bounded. Do not introdu
 arbitrary executable paths, shell commands, unreviewed remote binding or automatic
 production scans. Proposals currently have no execution path.
 
-Run the documented unittest suite for behavior changes and add focused valid and
+Run `mvn verify` for Java changes and the documented unittest suite for legacy behavior changes. Add focused valid and
 adverse cases for parsers, policy and API boundaries. Run node --check after JavaScript
 changes and inspect UI changes in a browser. Do not mark hosted CI or scanner
 integrations verified based only on local checks.

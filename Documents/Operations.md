@@ -1,3 +1,7 @@
+# Java server operations
+
+Use [Java enterprise edition](Enterprise.md) for current Java build, local H2, PostgreSQL, Keycloak, TLS, backups and SQLite migration. The instructions below document the preserved Python companion.
+
 # Operating the local OTSec companion
 
 ## Requirements and startup

@@ -5,3 +5,6 @@ data/
 .env
 # Existing local third-party checkout; tools integrate through adapters.
 /zeek/
+/target/
+/.idea/
+*.iml

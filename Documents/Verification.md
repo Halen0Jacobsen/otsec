@@ -1,3 +1,7 @@
+# Java verification
+
+Run `mvn verify` for the current Java backend. Tests cover report formats/redaction/XXE, atomicity, deduplication, scoped policies, CSRF, enterprise roles, HTTPS redirects and audit subjects using H2 and a stub identity registration. Real PostgreSQL, Keycloak, TLS infrastructure and migration cutover are not certified by these tests. See [enterprise validation](Enterprise.md). The record below describes legacy Python/UI verification.
+
 # Verification
 
 ## Local checks
