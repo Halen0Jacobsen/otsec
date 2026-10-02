@@ -26,7 +26,7 @@ serially. This is not a production availability implementation.
 | Method | Route | Behavior |
 | --- | --- | --- |
 | GET | `/` | Operator HTML workspace |
-| GET | `/app.js`, `/style.css`, `/wcd-logo.png`, allowlisted `/fonts/*.ttf` | Static application assets |
+| GET | `/app.js`, `/style.css`, `/wct-logo.png`, allowlisted `/fonts/*.ttf` | Static application assets |
 | GET | `/api/status` | Current bounded snapshot |
 | POST | `/api/environments` | Register an environment |
 | POST | `/api/import` | Import Zeek observations or supported security reports |

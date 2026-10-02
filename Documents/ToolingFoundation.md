@@ -103,4 +103,4 @@ for supported fields and limitations. Normalized findings and report import hist
 use separate tables and participate in the import/audit transaction. XML entities
 and DOCTYPE are rejected. Free text must be reviewed for secrets before importing.
 
-The UI follows the user-supplied current Widespread Custom brand system in [BrandSystem.md](BrandSystem.md). It uses warm paper, olive primary actions/sidebar, restrained gold accents, subtle borders, limited radii and locally bundled Inter typography. The white WCD logo remains on the olive sidebar.
+The UI follows the user-supplied current WCT brand system in [BrandSystem.md](BrandSystem.md). It uses warm paper, olive primary actions/sidebar, restrained gold accents, subtle borders, limited radii and locally bundled Inter typography. The white WCT logo remains on the olive sidebar.

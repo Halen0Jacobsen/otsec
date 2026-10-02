@@ -69,7 +69,7 @@ node --check tooling/otsec/web/app.js
 
 Tests cover atomic imports, formats, malformed input, deduplication, scope isolation, policies, persisted state, audit, HTTP writes/origin boundaries and font serving. GitLab CI runs Python tests alongside the existing security templates; hosted CI is unverified until publication.
 
-Fonts are bundled locally with open font licenses in `tooling/otsec/web/fonts`. No external font requests are made by the app. The interface follows the user-supplied current Widespread Custom brand system: warm paper #f4f1ea, deep olive #26351f, restrained gold #9d7744, muted grey/olive #68685f, white WCD logo on olive, subtle rules, limited corner radii and minimal shadows. Typography uses locally bundled Inter, with Plex Mono for technical identifiers. See [current brand system](Documents/BrandSystem.md).
+Fonts are bundled locally with open font licenses in `tooling/otsec/web/fonts`. No external font requests are made by the app. The interface follows the user-supplied current WCT brand system: warm paper #f4f1ea, deep olive #26351f, restrained gold #9d7744, muted grey/olive #68685f, white WCT logo on olive, subtle rules, limited corner radii and minimal shadows. Typography uses locally bundled Inter, with Plex Mono for technical identifiers. See [current brand system](Documents/BrandSystem.md).
 
 See [architecture and delivery gates](Documents/ToolingFoundation.md) and [integration contracts](Documents/IntegrationContracts.md). Existing project and security requirements remain release targets.
 
@@ -82,4 +82,4 @@ See [architecture and delivery gates](Documents/ToolingFoundation.md) and [integ
 - [Source map and adapter development](tooling/README.md)
 - [Contribution guidance](CONTRIBUTING.md)
 
-Bundled fonts include their SIL Open Font License notices. The WCD logo is a user-provided brand asset. Application/logo redistribution terms have not been selected; third-party tool licenses remain independent.
+Bundled fonts include their SIL Open Font License notices. The WCT logo is a user-provided brand asset. Application/logo redistribution terms have not been selected; third-party tool licenses remain independent.

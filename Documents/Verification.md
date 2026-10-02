@@ -35,7 +35,7 @@ development; the unchanged suite passed on rerun. Investigate if it recurs.
 - Synthetic Dependency-Check file import succeeds through the browser dialog.
 - Findings severity filter narrows the displayed rows.
 - Finding details show source, application, resource, rule and recommended action.
-- Current Widespread Custom colors, logo, locally served Inter fonts and restrained
+- Current WCT colors, logo, locally served Inter fonts and restrained
   corners were visually checked in the in-app browser.
 
 Screenshots and demo database remain local under ignored data/; they are not

@@ -70,8 +70,8 @@ def make_handler(database):
                 'inter-500.ttf', 'inter-600.ttf', 'inter-700.ttf'):
                 payload = (Path(__file__).parent / 'web' / self.path[1:]).read_bytes()
                 mime = 'font/ttf'
-            elif self.path == '/wcd-logo.png':
-                payload = (Path(__file__).parent / 'web' / 'wcd-logo.png').read_bytes()
+            elif self.path == '/wct-logo.png':
+                payload = (Path(__file__).parent / 'web' / 'wct-logo.png').read_bytes()
                 mime = 'image/png'
             elif self.path == "/api/status":
                 store = Store(database)

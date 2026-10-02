@@ -23,6 +23,6 @@ fixtures; never commit imported production evidence, databases, credentials or r
 secret scan output. The local Zeek checkout is excluded; integrate third-party tools
 through adapters rather than copying their source trees into this application.
 
-Bundled fonts retain their SIL Open Font License notices. The WCD logo is a user-
+Bundled fonts retain their SIL Open Font License notices. The WCT logo is a user-
 provided brand asset. No blanket application or logo license has been selected;
 do not infer redistribution terms from the word open source in tool integrations.

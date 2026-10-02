@@ -1,4 +1,4 @@
-# Widespread Custom — current brand system
+# WCT — current brand system
 
 Source: current guidelines supplied directly by the user in this chat. These values supersede older local reference files.
 
@@ -9,7 +9,7 @@ Source: current guidelines supplied directly by the user in this chat. These val
 | Accent | Restrained gold `#9d7744` |
 | Secondary neutral | Muted grey/olive `#68685f` |
 | Text | Dark ink / near-black |
-| Logo | White WCD logo on dark olive or other dark surfaces |
+| Logo | White WCT logo on dark olive or other dark surfaces |
 | Primary actions | Olive |
 | Gold | Accent only |
 | Gradients | Avoid |

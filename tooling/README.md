@@ -14,9 +14,9 @@ and a browser UI. Run instructions are in the [root README](../README.md).
 | `otsec/server.py` | Loopback HTTP routes, same-origin write checks and static-file allowlist |
 | `otsec/web/index.html` | Workspace views and accessible forms/dialogs |
 | `otsec/web/app.js` | UI rendering, filters, file imports and proposals using DOM textContent |
-| `otsec/web/style.css` | Current Widespread Custom branding, local font definitions and responsive layout |
+| `otsec/web/style.css` | Current WCT branding, local font definitions and responsive layout |
 | `otsec/web/fonts/` | Bundled fonts and OFL license notices |
-| `otsec/web/wcd-logo.png` | User-provided WCD logo |
+| `otsec/web/wct-logo.png` | User-provided WCT logo |
 | `examples/` | Synthetic connection and security reports; not real vulnerability evidence |
 | `tests/` | Standard-library unittest regression suite |
 

@@ -8,7 +8,7 @@ Start with the repository [README](../README.md) to run the application.
 | [HTTP API](API.md) | Local routes, request/response contracts, validation and access boundaries |
 | [Integration contracts](IntegrationContracts.md) | Supported report formats, severity mapping, deduplication and adapter limits |
 | [Architecture and delivery gates](ToolingFoundation.md) | Current companion architecture, threat register, release targets and requirement status |
-| [Current brand system](BrandSystem.md) | Authoritative Widespread Custom palette and UI conventions |
+| [Current brand system](BrandSystem.md) | Authoritative WCT palette and UI conventions |
 | [Verification](Verification.md) | Local check commands, test coverage, browser evidence and unverified areas |
 | [Project purpose](ProjectPurpose.md) | Planned Spring Boot, PostgreSQL, Keycloak and Mosquitto platform |
 | [Project scope](ProjectScope.md) | Overall platform scope and future extensions |
